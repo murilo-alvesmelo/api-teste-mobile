@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 const fs = require('fs');
+const port = process.env.PORT || 3001;
 
 app.use(cors())
 
@@ -87,6 +88,6 @@ app.get('/propriedades/:id', function(req, res) {
   });
 });
 
-app.listen(3001, function() {
-  console.log('Servidor iniciado na porta 3001');
+app.listen(port, function() {
+  console.log(`Servidor iniciado na porta ${port}`);
 });
